@@ -2,7 +2,6 @@ TARGET_SPECIFIC_HEADER_PATH := device/prestigio/rk30xx-common/include
 
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
-BOARD_HAS_NO_MISC_PARTITION := true
 
 # Platform
 TARGET_BOOTLOADER_BOARD_NAME := rk30board
@@ -35,6 +34,9 @@ USE_OPENGL_RENDERER := true
 TARGET_USES_ION := true
 BOARD_EGL_CFG := device/prestigio/rk30xx-common/config/egl.cfg
 
+#Bluetooth
+BOARD_HAVE_BLUETOOTH := true
+
 # Webkit
 ENABLE_WEBGL := true
 TARGET_FORCE_CPU_UPLOAD := true
@@ -42,3 +44,8 @@ TARGET_FORCE_CPU_UPLOAD := true
 #Bootanimation
 TARGET_BOOTANIMATION_PRELOAD := true
 TARGET_BOOTANIMATION_TEXTURE_CACHE := true
+
+# Avoid the generation of ldrcc instructions
+NEED_WORKAROUND_CORTEX_A9_745320 := true
+
+BOARD_HAS_NO_SELECT_BUTTON := true
