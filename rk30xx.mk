@@ -52,11 +52,6 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
-# Custom init / uevent
-PRODUCT_COPY_FILES += \
-    device/prestigio/rk30xx-common/config/init.rk30board.rc:root/init.rk30board.rc \
-    device/prestigio/rk30xx-common/config/ueventd.rk30board.rc:root/ueventd.rk30board.rc
-
 # USB function switching
 PRODUCT_COPY_FILES += \
     device/prestigio/rk30xx-common/config/init.rk30board.usb.rc:root/init.rk30board.usb.rc
