@@ -59,6 +59,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/prestigio/rk30xx-common/config/vold.fstab:system/etc/vold.fstab
 
+# Rockchip Keyboard
+PRODUCT_COPY_FILES += \
+    device/prestigio/rk30xx-common/config/rk29-keypad.kl:/system/usr/keylayout/rk29-keypad.kl
+
 # Misc
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
