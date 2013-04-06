@@ -34,6 +34,9 @@ USE_OPENGL_RENDERER := true
 TARGET_USES_ION := true
 BOARD_EGL_CFG := device/prestigio/rk30xx-common/config/egl.cfg
 
+# Camera
+BOARD_NEEDS_MEMORYHEAPPMEM := true
+
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 
