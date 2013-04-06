@@ -8,6 +8,7 @@ PRODUCT_COPY_FILES += \
 
 # boot.img blobs
 PRODUCT_COPY_FILES += \
+    device/prestigio/rk30xx-common/ramdisk/misc.img:root/misc.img \
     device/prestigio/rk30xx-common/ramdisk/prebuilt/e2fsck:root/sbin/e2fsck \
     device/prestigio/rk30xx-common/ramdisk/prebuilt/mkdosfs:root/sbin/mkdosfs \
     device/prestigio/rk30xx-common/ramdisk/prebuilt/mke2fs:root/sbin/mke2fs \
