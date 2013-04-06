@@ -54,3 +54,5 @@ TARGET_RECOVERY_PRE_COMMAND := "busybox dd if=/misc.img of=/dev/block/mtdblock0;
 BOARD_UMS_LUNFILE := "/sys/class/android_usb/android0/f_mass_storage/lun/file"
 BOARD_UMS_2ND_LUNFILE := "/sys/class/android_usb/android0/f_mass_storage/lun1/file"
 
+TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/prestigio/rk30xx-common/releasetools/rk_ota_from_target_files
+

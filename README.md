@@ -24,7 +24,7 @@ Add the Rockchip Vendor_ID to the file so that it looks as follows:
 Flashing Partitions
 -------------------
 
-Rockchip devices cannot take advantage of Google's fastboot tool. Instead a proprietary Windows tool, RKAndroidTool, must be used to flash stock ROMs and to install ClockworkMod Recovery. However once installed update.zip files can be flashed as normal.
+Rockchip devices cannot take advantage of Google's fastboot tool, nor can a new boot.img be flashed to the boot partition in ClockworkMod Recovery. Instead a proprietary Windows tool, RKAndroidTool, must be used to flash stock ROMs and to install ClockworkMod Recovery. CyanogenMod 10 ROMs therefore do not attempt to install a boot.img.
 
 Building ClockworkMod Recovery
 ------------------------------
@@ -34,3 +34,6 @@ The current method of installing ClockworkMod recovery is to discard the final r
 The command to repack the ramdisk-recovery.img is:
 
     $ mkkrnlimg -a ramdisk-recovery.img recovery.img
+
+Flashing boot and recovery
+--------------------------
