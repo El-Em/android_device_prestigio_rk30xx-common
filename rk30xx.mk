@@ -2,6 +2,33 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/prestigio/rk30xx-common/overlay
 
+# Rockchip init blob
+PRODUCT_COPY_FILES += \
+    device/prestigio/rk30xx-common/ramdisk/init:root/init \
+
+# boot.img blobs
+PRODUCT_COPY_FILES += \
+    device/prestigio/rk30xx-common/ramdisk/prebuilt/e2fsck:root/sbin/e2fsck \
+    device/prestigio/rk30xx-common/ramdisk/prebuilt/mkdosfs:root/sbin/mkdosfs \
+    device/prestigio/rk30xx-common/ramdisk/prebuilt/mke2fs:root/sbin/mke2fs \
+    device/prestigio/rk30xx-common/ramdisk/prebuilt/readahead:root/sbin/readahead \
+    device/prestigio/rk30xx-common/ramdisk/prebuilt/resize2fs:root/sbin/resize2fs \
+    device/prestigio/rk30xx-common/ramdisk/rk30xxnand_ko.ko.3.0.8+:root/rk30xxnand_ko.ko.3.0.8+ \
+    device/prestigio/rk30xx-common/ramdisk/rk30xxnand_ko.ko.3.0.36+:root/rk30xxnand_ko.ko.3.0.36+ \
+
+# Offline charging
+PRODUCT_COPY_FILES += \
+    device/prestigio/rk30xx-common/ramdisk/charger:root/charger \
+    device/prestigio/rk30xx-common/ramdisk/img/battery_0.png:root/res/images/charger/battery_0.png \
+    device/prestigio/rk30xx-common/ramdisk/img/battery_1.png:root/res/images/charger/battery_1.png \
+    device/prestigio/rk30xx-common/ramdisk/img/battery_2.png:root/res/images/charger/battery_2.png \
+    device/prestigio/rk30xx-common/ramdisk/img/battery_3.png:root/res/images/charger/battery_3.png \
+    device/prestigio/rk30xx-common/ramdisk/img/battery_4.png:root/res/images/charger/battery_4.png \
+    device/prestigio/rk30xx-common/ramdisk/img/battery_5.png:root/res/images/charger/battery_5.png \
+    device/prestigio/rk30xx-common/ramdisk/img/battery_charge.png:root/res/images/charger/battery_charge.png \
+    device/prestigio/rk30xx-common/ramdisk/img/battery_fail.png:root/res/images/charger/battery_fail.png \
+    device/prestigio/rk30xx-common/ramdisk/img/battery_full.png:root/res/images/charger/battery_full.png \
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
@@ -51,10 +78,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_TAGS += dalvik.gc.type-precise
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-
-# USB function switching
-PRODUCT_COPY_FILES += \
-    device/prestigio/rk30xx-common/config/init.rk30board.usb.rc:root/init.rk30board.usb.rc
 
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
