@@ -21,7 +21,7 @@ ARCH_ARM_HAVE_ARMV7A := true
 TARGET_GLOBAL_CFLAGS += -mtune=cortex-a9 -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a9 -mfpu=neon -mfloat-abi=softfp
 
-COMMON_GLOBAL_CFLAGS += 
+COMMON_GLOBAL_CFLAGS += -DMISSING_GRALLOC_BUFFERS
 
 # Kernel information
 TARGET_KERNEL_SOURCE := kernel/prestigio/rk30xx
@@ -34,9 +34,13 @@ USE_OPENGL_RENDERER := true
 TARGET_DISABLE_TRIPLE_BUFFERING := true
 #TARGET_USES_ION := true
 BOARD_EGL_CFG := device/prestigio/rk30xx-common/config/egl.cfg
+BOARD_USES_HDMI := true
 
 # HWComposer
 BOARD_USES_HWCOMPOSER := true
+
+# OMX - for now use soft decoding :(
+# BOARD_USES_PROPRIETARY_OMX := true
 
 # Camera
 BOARD_NEEDS_MEMORYHEAPPMEM := true
