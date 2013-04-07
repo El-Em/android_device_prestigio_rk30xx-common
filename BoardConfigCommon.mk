@@ -31,8 +31,12 @@ BOARD_KERNEL_PAGESIZE := 16384
 
 # Graphics
 USE_OPENGL_RENDERER := true
-TARGET_USES_ION := true
+TARGET_DISABLE_TRIPLE_BUFFERING := true
+#TARGET_USES_ION := true
 BOARD_EGL_CFG := device/prestigio/rk30xx-common/config/egl.cfg
+
+# HWComposer
+BOARD_USES_HWCOMPOSER := true
 
 # Camera
 BOARD_NEEDS_MEMORYHEAPPMEM := true
