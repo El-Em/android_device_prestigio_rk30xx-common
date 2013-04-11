@@ -45,9 +45,6 @@ BOARD_USES_HWCOMPOSER := true
 # Camera
 BOARD_NEEDS_MEMORYHEAPPMEM := true
 
-# Bluetooth
-BOARD_HAVE_BLUETOOTH := true
-
 # Webkit
 ENABLE_WEBGL := true
 TARGET_FORCE_CPU_UPLOAD := true
