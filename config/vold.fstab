@@ -1,3 +1,3 @@
 dev_mount sdcard /storage/sdcard0 auto /devices/virtual/mtd/mtd9/mtdblock9
 dev_mount flash /storage/sdcard1 auto /devices/platform/rk29_sdmmc.0/mmc_host/mmc0
-dev_mount udisk /mnt/usbdisk0 auto /devices/platform/usb20_otg/usb1
+dev_mount udisk /storage/usbdisk0 auto /devices/platform/usb20_otg/usb1
