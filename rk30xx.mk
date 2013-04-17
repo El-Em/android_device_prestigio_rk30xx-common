@@ -3,6 +3,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # Rockchip init blob
 PRODUCT_COPY_FILES += \
     device/prestigio/rk30xx-common/ramdisk/init:root/init \
+    device/prestigio/rk30xx-common/config/modelid_cfg.sh:system/bin/modelid_cfg.sh \
 
 # boot.img blobs
 PRODUCT_COPY_FILES += \
